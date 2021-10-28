@@ -36,7 +36,7 @@ def convert(msg, value):
         elif i == 'f':
             unit = i
             new_unit = 'c'
-            new_value = (value - 32) * 1.8
+            new_value = (value - 32) / 1.8
             new_value = round(new_value, 2)
             return str(value) + ' ' + unit + ' is equal to ' + str(new_value) + ' ' + new_unit
         else:

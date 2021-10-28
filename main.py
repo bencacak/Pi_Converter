@@ -15,7 +15,11 @@ async def on_message(msg):
         if value == None:
             return;
         else:
-            await msg.channel.send(f'**{msg.author},** {convert(msg.content, value)}')
+            output = convert(msg.content, value)
+            if output == None:
+                return
+            else:
+                await msg.channel.send(f'**{msg.author},** {output}')
 
 @bot.event
 async def on_ready():
