@@ -44,7 +44,7 @@ def convert(msg, value):
             new_unit = 'in'
             new_value = value / 2.54
             return str(value) + ' ' + unit + ' is equal to ' + str(new_value) + ' ' + new_unit
-        elif i == 'in':
+        elif i == 'in' or i == 'inch' or i == 'inches':
             unit = i
             new_unit = 'cm'
             new_value = value * 2.54
