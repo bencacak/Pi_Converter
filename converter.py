@@ -15,13 +15,13 @@ def convert(msg, value):
             new_value = value * 1.62
             new_value = round(new_value, 2)
             return str(value) + ' ' + unit + ' is equal to ' + str(new_value) + ' ' + new_unit
-        elif i == 'kg':
+        elif i == 'kg' or i == 'kgs':
             unit = i
             new_unit = 'lb'
             new_value = value * 2.21
             new_value = round(new_value, 2)
             return str(value) + ' ' + unit + ' is equal to ' + str(new_value) + ' ' + new_unit
-        elif i == 'lb':
+        elif i == 'lb' or i == 'lbs':
             unit = i
             new_unit = 'kg'
             new_value = value / 2.21
@@ -39,8 +39,18 @@ def convert(msg, value):
             new_value = (value - 32) / 1.8
             new_value = round(new_value, 2)
             return str(value) + ' ' + unit + ' is equal to ' + str(new_value) + ' ' + new_unit
+        elif i == 'cm':
+            unit = i
+            new_unit = 'in'
+            new_value = value / 2.54
+            return str(value) + ' ' + unit + ' is equal to ' + str(new_value) + ' ' + new_unit
+        elif i == 'in':
+            unit = i
+            new_unit = 'cm'
+            new_value = value * 2.54
+            return str(value) + ' ' + unit + ' is equal to ' + str(new_value) + ' ' + new_unit
         else:
-            print("Not yet...")
+            pass
         
 
         

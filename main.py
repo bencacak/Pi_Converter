@@ -1,7 +1,8 @@
 import os
 import nextcord
 
-bot = nextcord.Client()
+activity = nextcord.Activity(name='your every word', type = nextcord.ActivityType.listening)
+bot = nextcord.Client(activity=activity)
 
 @bot.event
 async def on_message(msg):
@@ -24,6 +25,7 @@ async def on_message(msg):
 @bot.event
 async def on_ready():
     print(f'{bot.user} is live!')
+    
 
 bot.run(os.environ['TOKEN'])
 

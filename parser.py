@@ -1,7 +1,8 @@
 def parse_num(msg):
     message = msg.split(' ')
     for x in message:
-        if x.isnumeric():
-            value = x
-            return float(value)
-            
+        try:
+            return float(x)
+        except ValueError:
+            #print(x)
+            pass
