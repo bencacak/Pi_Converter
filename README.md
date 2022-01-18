@@ -1,5 +1,5 @@
 # Pi' Conversions
-## v1.0.2
+## v1.1.2
 ### A Python Discord bot to automatically handle conversions between metric and imperial units.
 ---
 #### Accepted Arguments
@@ -16,6 +16,10 @@
     - Will convert degrees `c` to degrees `f`
 - `f`
     - Will convert degrees `f` to degrees `c`
+- `inch` or `inches`
+    - Will convert `inches` to `centimeters`
+- `cm`
+    - Will convert `centimeters` to `inches`
 --- 
 ### Example
 ```
